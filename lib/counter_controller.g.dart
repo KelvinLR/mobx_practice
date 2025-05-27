@@ -40,6 +40,17 @@ mixin _$CounterController on CounterControllerBase, Store {
   }
 
   @override
+  void decrement() {
+    final _$actionInfo = _$CounterControllerBaseActionController.startAction(
+        name: 'CounterControllerBase.decrement');
+    try {
+      return super.decrement();
+    } finally {
+      _$CounterControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 count: ${count}

@@ -11,4 +11,9 @@ abstract class CounterControllerBase with Store {
   void increment() {
     count++;
   }
+
+  @action
+  void decrement() {
+    count--;
+  }
 }
